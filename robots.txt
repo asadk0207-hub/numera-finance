@@ -11,7 +11,7 @@ Allow: /sitemap.xml
 Allow: /manifest.json
 
 # Sitemap location
-Sitemap: https://numera.com/sitemap.xml
+Sitemap: https://numera-finance.netlify.app/sitemap.xml
 
 # Crawl delay for respectful crawling
 Crawl-delay: 1

@@ -1,0 +1,60 @@
+[build]
+  # No build command needed for static site
+  command = ""
+  # Publish the root directory
+  publish = "."
+
+[build.environment]
+  # Node version (if needed for future enhancements)
+  NODE_VERSION = "18"
+
+# Headers for better security and performance (Analytics-friendly)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Security headers (removed restrictive CSP)
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Allow Google Analytics connections
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;"
+    
+    # Performance headers
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    # HTML files shouldn't be cached as long
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# Redirects (if needed)
+[[redirects]]
+  from = "/calculator"
+  to = "/#calculator"
+  status = 301
+
+[[redirects]]
+  from = "/loan"
+  to = "/#loan-calculator"
+  status = 301
+
+[[redirects]]
+  from = "/investment"
+  to = "/#investment-calculator"
+  status = 301
+
+# Form handling (for future contact forms)
+[forms]
+  # Netlify will automatically handle forms with netlify attribute
