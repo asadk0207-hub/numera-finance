@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Analytics Test - Numera Calculators</title>
+    
+    <!-- Google tag (gtag.js) - Test Implementation -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC6133KKT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        // Test Google Analytics configuration
+        gtag('config', 'G-SC6133KKT', {
+            page_title: 'Analytics Test Page',
+            page_location: window.location.href,
+            send_page_view: true,
+            anonymize_ip: true,
+            cookie_flags: 'SameSite=None;Secure'
+        });
+        
+        console.log('Google Analytics loaded for test');
+        console.log('gtag function:', typeof gtag);
+        console.log('dataLayer:', window.dataLayer);
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 40px; max-width: 800px; margin: 0 auto;">
+    <h1>🔍 Google Analytics Test Page</h1>
+    <p><strong>Testing URL:</strong> <span id="currentUrl"></span></p>
+    <p><strong>Analytics ID:</strong> G-SC6133KKT</p>
+    
+    <div style="background: #f5f5f5; padding: 20px; margin: 20px 0; border-radius: 8px;">
+        <h2>✅ Verification Steps:</h2>
+        <ol>
+            <li>Open browser Developer Tools (F12)</li>
+            <li>Go to Console tab</li>
+            <li>Check for "Google Analytics loaded for test" message</li>
+            <li>Verify gtag function is available</li>
+            <li>Check Network tab for requests to google-analytics.com</li>
+        </ol>
+    </div>
+    
+    <button onclick="testAnalytics()" style="background: #2563eb; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px;">
+        🧪 Test Analytics Event
+    </button>
+    
+    <div id="testResults" style="margin-top: 20px; padding: 16px; background: #e7f3ff; border-radius: 6px; display: none;">
+        <h3>Test Results:</h3>
+        <pre id="resultsContent"></pre>
+    </div>
+    
+    <script>
+        // Display current URL
+        document.getElementById('currentUrl').textContent = window.location.href;
+        
+        function testAnalytics() {
+            const results = {
+                gtagExists: typeof gtag !== 'undefined',
+                dataLayerExists: typeof window.dataLayer !== 'undefined',
+                dataLayerLength: window.dataLayer ? window.dataLayer.length : 0,
+                currentUrl: window.location.href,
+                timestamp: new Date().toISOString()
+            };
+            
+            // Send a test event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'test_button_click', {
+                    custom_parameter: 'analytics_verification',
+                    page_location: window.location.href
+                });
+                results.testEventSent = true;
+            } else {
+                results.testEventSent = false;
+                results.error = 'gtag function not available';
+            }
+            
+            // Display results
+            document.getElementById('testResults').style.display = 'block';
+            document.getElementById('resultsContent').textContent = JSON.stringify(results, null, 2);
+            
+            console.log('Analytics Test Results:', results);
+        }
+        
+        // Auto-run basic checks after page load
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                console.log('=== Google Analytics Status ===');
+                console.log('gtag available:', typeof gtag !== 'undefined');
+                console.log('dataLayer available:', typeof window.dataLayer !== 'undefined');
+                console.log('dataLayer contents:', window.dataLayer);
+                
+                if (typeof gtag !== 'undefined') {
+                    console.log('✅ Google Analytics is properly loaded');
+                } else {
+                    console.error('❌ Google Analytics failed to load');
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
