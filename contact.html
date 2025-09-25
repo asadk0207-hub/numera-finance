@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Numera Financial Calculator Suite</title>
+    <meta name="description" content="Contact Numera for support, feedback, or suggestions about our free financial calculators. We're here to help improve your financial planning experience.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://numera-calculators.netlify.app/contact.html">
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC6133KKTD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SC6133KKTD');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4629347255241535" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="logo.svg" alt="Numera Logo" class="logo-img">
+                    <span class="logo-text">Numera</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                    <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="nav-link">Terms of Service</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="contact-content">
+                <section class="contact-hero">
+                    <h1>Contact Us</h1>
+                    <p class="hero-subtitle">We'd love to hear from you! Share your feedback, suggestions, or report any issues.</p>
+                </section>
+
+                <div class="contact-main">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-item">
+                                <i class="fas fa-globe"></i>
+                                <div>
+                                    <h3>Website</h3>
+                                    <p><a href="https://numera-calculators.netlify.app">https://numera-calculators.netlify.app</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h3>Service Availability</h3>
+                                    <p>24/7 Online Access<br>Response Time: 1-3 business days</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h3>Privacy</h3>
+                                    <p>Your data is secure. We only collect necessary information to respond to your inquiries.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="support-options">
+                            <h2>How We Can Help</h2>
+                            <div class="support-grid">
+                                <div class="support-item">
+                                    <i class="fas fa-bug"></i>
+                                    <h4>Bug Reports</h4>
+                                    <p>Found an issue with our calculators? Let us know the details and we'll fix it quickly.</p>
+                                </div>
+                                <div class="support-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <h4>Feature Requests</h4>
+                                    <p>Have ideas for new calculators or features? We love implementing user suggestions.</p>
+                                </div>
+                                <div class="support-item">
+                                    <i class="fas fa-question-circle"></i>
+                                    <h4>General Questions</h4>
+                                    <p>Need help using our tools or understanding financial calculations? We're here to help.</p>
+                                </div>
+                                <div class="support-item">
+                                    <i class="fas fa-handshake"></i>
+                                    <h4>Partnerships</h4>
+                                    <p>Interested in collaborating or integrating our tools? Let's discuss opportunities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-section">
+                        <div class="form-card">
+                            <h2>Send us a Message</h2>
+                            <form class="contact-form" id="contactForm">
+                                <div class="form-group">
+                                    <label for="name">Name *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject">Subject *</label>
+                                    <select id="subject" name="subject" required>
+                                        <option value="">Select a topic...</option>
+                                        <option value="bug-report">Bug Report</option>
+                                        <option value="feature-request">Feature Request</option>
+                                        <option value="general-question">General Question</option>
+                                        <option value="partnership">Partnership Inquiry</option>
+                                        <option value="feedback">General Feedback</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="calculator">Related Calculator (if applicable)</label>
+                                    <select id="calculator" name="calculator">
+                                        <option value="">Select calculator...</option>
+                                        <option value="emi">EMI Calculator</option>
+                                        <option value="sip">SIP Calculator</option>
+                                        <option value="tax">Tax Calculator</option>
+                                        <option value="scientific">Scientific Calculator</option>
+                                        <option value="zakat">Zakat Calculator</option>
+                                        <option value="general">General Website</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="message" rows="6" required placeholder="Please provide as much detail as possible..."></textarea>
+                                </div>
+                                
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="privacy" name="privacy" required>
+                                        <span class="checkmark"></span>
+                                        I agree to the <a href="privacy-policy.html" target="_blank">Privacy Policy</a> and understand that my information will only be used to respond to this inquiry.
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn" id="submitBtn">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                            </form>
+                            
+                            <div class="form-success" id="successMessage" style="display: none;">
+                                <i class="fas fa-check-circle"></i>
+                                <h3>Message Sent Successfully!</h3>
+                                <p>Thank you for contacting us. We'll get back to you within 1-3 business days.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="faq-section">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>Are your calculators really free?</h4>
+                            <p>Yes! All our calculators are completely free to use with no hidden charges, no registration required, and no premium features.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>How accurate are the calculations?</h4>
+                            <p>We use industry-standard financial formulas and regularly test our calculators to ensure accuracy. However, always consult professionals for important financial decisions.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Do you store my financial data?</h4>
+                            <p>No, all calculations are performed locally in your browser. We don't store or transmit any of your financial information.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Can I suggest new calculators?</h4>
+                            <p>Absolutely! We love user suggestions and regularly implement new calculators based on user feedback. Use the contact form above to share your ideas.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>How often do you update the calculators?</h4>
+                            <p>We continuously monitor and update our calculators to ensure they reflect current financial regulations and best practices.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Can I use these calculators for business purposes?</h4>
+                            <p>Our calculators are for personal use and educational purposes. For business applications, please contact us to discuss your specific needs.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Numera</h3>
+                    <p>Free financial calculators for everyone. Make informed financial decisions with our comprehensive suite of calculation tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Calculators</h4>
+                    <ul>
+                        <li><a href="index.html#emi-calculator">EMI Calculator</a></li>
+                        <li><a href="index.html#sip-calculator">SIP Calculator</a></li>
+                        <li><a href="index.html#tax-calculator">Tax Calculator</a></li>
+                        <li><a href="index.html#scientific-calculator">Scientific Calculator</a></li>
+                        <li><a href="index.html#zakat-calculator">Zakat Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Numera. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .contact-hero {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            border-radius: 16px;
+            margin-bottom: 3rem;
+        }
+
+        .contact-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #2563eb;
+            margin-right: 1rem;
+            margin-top: 0.25rem;
+        }
+
+        .contact-item h3 {
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+            font-size: 1.1rem;
+        }
+
+        .contact-item p {
+            color: #6b7280;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .contact-item a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .support-options h2 {
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .support-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .support-item i {
+            font-size: 2rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+
+        .support-item h4 {
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .support-item p {
+            color: #6b7280;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .form-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-card h2 {
+            color: #1f2937;
+            margin-bottom: 2rem;
+            font-size: 1.75rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            font-size: 0.9rem;
+            color: #6b7280;
+            line-height: 1.4;
+            cursor: pointer;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: auto;
+            margin-right: 0.5rem;
+            margin-top: 0.1rem;
+        }
+
+        .checkbox-label a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .checkbox-label a:hover {
+            text-decoration: underline;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        .form-success {
+            text-align: center;
+            padding: 2rem;
+            background: #f0fdf4;
+            border: 2px solid #22c55e;
+            border-radius: 12px;
+        }
+
+        .form-success i {
+            font-size: 3rem;
+            color: #22c55e;
+            margin-bottom: 1rem;
+        }
+
+        .form-success h3 {
+            color: #166534;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-success p {
+            color: #15803d;
+        }
+
+        .faq-section {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            color: #1f2937;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .faq-item {
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .faq-item h4 {
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                padding: 1rem;
+            }
+
+            .contact-hero {
+                padding: 2rem 1rem;
+            }
+
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-main {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .support-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .form-card {
+                padding: 1.5rem;
+            }
+
+            .faq-section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+
+    <script>
+        // Simple form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const privacy = document.getElementById('privacy').checked;
+            
+            if (!name || !email || !subject || !message || !privacy) {
+                alert('Please fill in all required fields and accept the privacy policy.');
+                return;
+            }
+            
+            // Simulate form submission
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Track form submission with Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'form_submit', {
+                    'event_category': 'Contact',
+                    'event_label': subject
+                });
+            }
+        });
+    </script>
+</body>
+</html>
