@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Calculator - Investment Growth & Goal Planning Calculator | Numera</title>
+    <meta name="description" content="Plan your savings goals and calculate investment growth with our free savings calculator. Set financial targets and track progress toward your savings objectives.">
+    <meta name="keywords" content="savings calculator, investment growth calculator, financial goal calculator, savings plan calculator, compound interest calculator, retirement planning">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="canonical" href="https://numera-calculators.netlify.app/savings-calculator.html">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC6133KKTD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SC6133KKTD');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4629347255241535" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html"><img src="logo.svg" alt="Numera Financial Tools" class="logo"></a>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#tools" class="nav-link">Tools</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <article class="calculator-page">
+                <header class="page-header">
+                    <h1><i class="fas fa-piggy-bank"></i> Savings Calculator - Investment Growth & Goal Planning</h1>
+                    <p class="page-description">Plan your savings goals, calculate investment growth, and build wealth with our comprehensive savings calculator. Set financial targets and track your progress toward achieving your savings objectives.</p>
+                </header>
+
+                <!-- AdSense Top Banner -->
+                <div class="ad-container top-banner">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-4629347255241535"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <!-- Calculator Tool -->
+                <section class="calculator-section">
+                    <div class="calculator-form">
+                        <h2>Savings & Investment Growth Calculator</h2>
+                        
+                        <div class="calculator-tabs">
+                            <button class="tab-btn active" onclick="switchTab('goal')">Savings Goal</button>
+                            <button class="tab-btn" onclick="switchTab('growth')">Investment Growth</button>
+                            <button class="tab-btn" onclick="switchTab('retirement')">Retirement Planning</button>
+                        </div>
+
+                        <div id="goalTab" class="tab-content active">
+                            <h3>Savings Goal Calculator</h3>
+                            <div class="form-group">
+                                <label for="targetAmount">Target Savings Amount (PKR)</label>
+                                <input type="number" id="targetAmount" placeholder="e.g., 500000" min="1000">
+                                <small>How much do you want to save?</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="timeToGoal">Time to Achieve Goal</label>
+                                <div class="time-input">
+                                    <input type="number" id="timeValue" placeholder="e.g., 5" min="1">
+                                    <select id="timeUnit">
+                                        <option value="years" selected>Years</option>
+                                        <option value="months">Months</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="currentSavings">Current Savings (PKR)</label>
+                                <input type="number" id="currentSavings" placeholder="e.g., 50000" min="0">
+                                <small>How much have you already saved?</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="interestRate">Expected Annual Return (%)</label>
+                                <input type="number" id="interestRate" placeholder="e.g., 10" min="0.1" max="30" step="0.1">
+                                <small>Expected return from savings/investment accounts</small>
+                            </div>
+                        </div>
+
+                        <div id="growthTab" class="tab-content">
+                            <h3>Investment Growth Calculator</h3>
+                            <div class="form-group">
+                                <label for="initialAmount">Initial Investment (PKR)</label>
+                                <input type="number" id="initialAmount" placeholder="e.g., 100000" min="1000">
+                            </div>
+                            <div class="form-group">
+                                <label for="monthlyContribution">Monthly Contribution (PKR)</label>
+                                <input type="number" id="monthlyContribution" placeholder="e.g., 5000" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="annualReturn">Annual Return Rate (%)</label>
+                                <input type="number" id="annualReturn" placeholder="e.g., 12" min="0.1" max="50" step="0.1">
+                            </div>
+                            <div class="form-group">
+                                <label for="investmentYears">Investment Period (Years)</label>
+                                <input type="number" id="investmentYears" placeholder="e.g., 10" min="1" max="50">
+                            </div>
+                        </div>
+
+                        <div id="retirementTab" class="tab-content">
+                            <h3>Retirement Planning Calculator</h3>
+                            <div class="form-group">
+                                <label for="currentAge">Current Age</label>
+                                <input type="number" id="currentAge" placeholder="e.g., 30" min="18" max="70">
+                            </div>
+                            <div class="form-group">
+                                <label for="retirementAge">Retirement Age</label>
+                                <input type="number" id="retirementAge" placeholder="e.g., 60" min="50" max="80">
+                            </div>
+                            <div class="form-group">
+                                <label for="monthlyExpenses">Current Monthly Expenses (PKR)</label>
+                                <input type="number" id="monthlyExpenses" placeholder="e.g., 50000" min="5000">
+                            </div>
+                            <div class="form-group">
+                                <label for="inflationRate">Expected Inflation Rate (%)</label>
+                                <input type="number" id="inflationRate" placeholder="e.g., 8" min="1" max="20" step="0.1">
+                                <small>Historical inflation in Pakistan: 6-12%</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="expectedReturn">Expected Investment Return (%)</label>
+                                <input type="number" id="expectedReturn" placeholder="e.g., 12" min="3" max="25" step="0.1">
+                            </div>
+                        </div>
+
+                        <button class="calculate-btn" onclick="calculateSavings()">Calculate Savings Plan</button>
+                    </div>
+                    
+                    <div id="savingsResult" class="result-section"></div>
+                </section>
+
+                <!-- Educational Content -->
+                <section class="educational-content">
+                    <h2>Building Wealth Through Smart Savings</h2>
+                    
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3><i class="fas fa-seedling"></i> The Power of Compound Interest</h3>
+                            <p>Compound interest is the eighth wonder of the world. It's the process where your savings earn interest, and that interest then earns interest, creating exponential growth over time.</p>
+                            
+                            <h4>Compound Interest Formula:</h4>
+                            <div class="formula-box">
+                                <p><strong>A = P(1 + r/n)^(nt)</strong></p>
+                                <p>Where:</p>
+                                <ul>
+                                    <li>A = Final amount</li>
+                                    <li>P = Principal (initial investment)</li>
+                                    <li>r = Annual interest rate</li>
+                                    <li>n = Number of times interest compounds per year</li>
+                                    <li>t = Time in years</li>
+                                </ul>
+                            </div>
+                            
+                            <h4>The Magic of Time:</h4>
+                            <div class="example-box">
+                                <p><strong>Example:</strong> PKR 100,000 invested at 12% annually</p>
+                                <p>After 10 years: PKR 310,585</p>
+                                <p>After 20 years: PKR 964,629</p>
+                                <p>After 30 years: PKR 2,995,992</p>
+                                <p><em>Time multiplies your money exponentially!</em></p>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <h3><i class="fas fa-target"></i> Setting SMART Savings Goals</h3>
+                            
+                            <h4>SMART Goal Framework:</h4>
+                            <ul>
+                                <li><strong>Specific:</strong> Define exactly what you're saving for</li>
+                                <li><strong>Measurable:</strong> Set a clear monetary target</li>
+                                <li><strong>Achievable:</strong> Ensure the goal is realistic</li>
+                                <li><strong>Relevant:</strong> Align with your life priorities</li>
+                                <li><strong>Time-bound:</strong> Set a deadline</li>
+                            </ul>
+                            
+                            <h4>Common Savings Goals in Pakistan:</h4>
+                            
+                            <h5>1. Emergency Fund (Priority #1)</h5>
+                            <p>Build 6-12 months of expenses as emergency fund</p>
+                            <ul>
+                                <li>Target: PKR 3-6 lakhs for average families</li>
+                                <li>Timeline: 12-18 months</li>
+                                <li>Strategy: High-liquidity savings accounts</li>
+                            </ul>
+                            
+                            <h5>2. Home Down Payment</h5>
+                            <p>Save for property purchase down payment</p>
+                            <ul>
+                                <li>Target: 20% of property value (PKR 10-30 lakhs)</li>
+                                <li>Timeline: 3-7 years</li>
+                                <li>Strategy: Mix of savings and low-risk investments</li>
+                            </ul>
+                            
+                            <h5>3. Children's Education</h5>
+                            <p>Plan for higher education costs</p>
+                            <ul>
+                                <li>Target: PKR 15-50 lakhs per child</li>
+                                <li>Timeline: 15-18 years</li>
+                                <li>Strategy: Education savings plans, mutual funds</li>
+                            </ul>
+                            
+                            <h5>4. Retirement Planning</h5>
+                            <p>Build retirement corpus for financial independence</p>
+                            <ul>
+                                <li>Target: 25-30x annual expenses</li>
+                                <li>Timeline: 25-40 years</li>
+                                <li>Strategy: Pension funds, equity investments</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card">
+                            <h3><i class="fas fa-chart-line"></i> Investment Options in Pakistan</h3>
+                            
+                            <h4>1. Bank Savings Accounts</h4>
+                            <p>Low-risk option for emergency funds and short-term goals</p>
+                            <ul>
+                                <li><strong>Returns:</strong> 5-8% annually</li>
+                                <li><strong>Risk:</strong> Very low</li>
+                                <li><strong>Liquidity:</strong> High</li>
+                                <li><strong>Best For:</strong> Emergency funds, short-term goals</li>
+                            </ul>
+                            
+                            <h4>2. Fixed Deposits (Term Deposits)</h4>
+                            <p>Guaranteed returns with fixed tenure</p>
+                            <ul>
+                                <li><strong>Returns:</strong> 8-12% annually</li>
+                                <li><strong>Risk:</strong> Very low</li>
+                                <li><strong>Liquidity:</strong> Low (penalty for early withdrawal)</li>
+                                <li><strong>Best For:</strong> Conservative investors, specific goals</li>
+                            </ul>
+                            
+                            <h4>3. National Savings Schemes</h4>
+                            <p>Government-backed savings instruments</p>
+                            <ul>
+                                <li><strong>Returns:</strong> 8-14% annually</li>
+                                <li><strong>Risk:</strong> Very low (government guarantee)</li>
+                                <li><strong>Types:</strong> Defence Savings, Special Savings, Pensioners Benefit</li>
+                                <li><strong>Best For:</strong> Long-term conservative savings</li>
+                            </ul>
+                            
+                            <h4>4. Mutual Funds</h4>
+                            <p>Professionally managed diversified investments</p>
+                            <ul>
+                                <li><strong>Returns:</strong> 8-18% annually (varies by type)</li>
+                                <li><strong>Risk:</strong> Low to high (depends on fund type)</li>
+                                <li><strong>Types:</strong> Money market, income, balanced, equity funds</li>
+                                <li><strong>Best For:</strong> Medium to long-term goals</li>
+                            </ul>
+                            
+                            <h4>5. Stock Market (PSX)</h4>
+                            <p>Direct equity investment for higher returns</p>
+                            <ul>
+                                <li><strong>Returns:</strong> 10-25% annually (historical average)</li>
+                                <li><strong>Risk:</strong> High (market volatility)</li>
+                                <li><strong>Best For:</strong> Long-term wealth building, experienced investors</li>
+                            </ul>
+                            
+                            <h4>6. Real Estate</h4>
+                            <p>Property investment for long-term appreciation</p>
+                            <ul>
+                                <li><strong>Returns:</strong> 8-20% annually (location dependent)</li>
+                                <li><strong>Risk:</strong> Medium to high</li>
+                                <li><strong>Liquidity:</strong> Low</li>
+                                <li><strong>Best For:</strong> Long-term wealth preservation</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card">
+                            <h3><i class="fas fa-brain"></i> Smart Savings Strategies</h3>
+                            
+                            <h4>1. Pay Yourself First</h4>
+                            <p>Automatically save a percentage of income before any expenses</p>
+                            <ul>
+                                <li>Set up automatic transfers to savings accounts</li>
+                                <li>Treat savings as a non-negotiable expense</li>
+                                <li>Start with 10-20% of income</li>
+                            </ul>
+                            
+                            <h4>2. The 50/30/20 Rule</h4>
+                            <p>Budget allocation framework for balanced financial health</p>
+                            <ul>
+                                <li><strong>50%:</strong> Needs (rent, utilities, groceries)</li>
+                                <li><strong>30%:</strong> Wants (entertainment, dining out)</li>
+                                <li><strong>20%:</strong> Savings and debt repayment</li>
+                            </ul>
+                            
+                            <h4>3. Dollar Cost Averaging</h4>
+                            <p>Invest fixed amounts regularly regardless of market conditions</p>
+                            <ul>
+                                <li>Reduces impact of market volatility</li>
+                                <li>Builds discipline in investing</li>
+                                <li>Works well with mutual funds and SIPs</li>
+                            </ul>
+                            
+                            <h4>4. Asset Allocation Strategy</h4>
+                            <p>Diversify across different investment types based on age and goals</p>
+                            <div class="allocation-guide">
+                                <h5>Age-Based Allocation Guide:</h5>
+                                <p><strong>20s-30s:</strong> 70% Growth assets, 30% Stable assets</p>
+                                <p><strong>30s-40s:</strong> 60% Growth assets, 40% Stable assets</p>
+                                <p><strong>40s-50s:</strong> 50% Growth assets, 50% Stable assets</p>
+                                <p><strong>50s+:</strong> 40% Growth assets, 60% Stable assets</p>
+                            </div>
+                            
+                            <h4>5. Tax-Efficient Saving</h4>
+                            <p>Maximize tax benefits while saving</p>
+                            <ul>
+                                <li>Utilize pension fund contributions (tax deductible)</li>
+                                <li>Choose tax-efficient investment vehicles</li>
+                                <li>Consider profit vs. interest for tax implications</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AdSense Middle Banner -->
+                <div class="ad-container middle-banner">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-fb+5w+4e-db+86"
+                         data-ad-client="ca-pub-4629347255241535"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <section class="tips-section">
+                    <h2>Practical Savings Tips for Pakistan</h2>
+                    
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h3><i class="fas fa-mobile-alt"></i> Use Digital Banking</h3>
+                            <p>Leverage mobile banking apps for easy savings management</p>
+                            <ul>
+                                <li>Set up automatic transfers</li>
+                                <li>Track expenses with banking apps</li>
+                                <li>Use digital wallets for cashless spending</li>
+                                <li>Monitor savings goals progress</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h3><i class="fas fa-cut"></i> Cut Unnecessary Expenses</h3>
+                            <p>Identify and eliminate wasteful spending</p>
+                            <ul>
+                                <li>Review mobile/internet plans annually</li>
+                                <li>Cook at home more often</li>
+                                <li>Use public transport when possible</li>
+                                <li>Cancel unused subscriptions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h3><i class="fas fa-percentage"></i> Take Advantage of Discounts</h3>
+                            <p>Smart shopping to maximize savings</p>
+                            <ul>
+                                <li>Shop during sales and discounts</li>
+                                <li>Use cashback credit cards responsibly</li>
+                                <li>Buy in bulk for non-perishables</li>
+                                <li>Compare prices before major purchases</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h3><i class="fas fa-coins"></i> Side Income Opportunities</i></h3>
+                            <p>Increase income to boost savings capacity</p>
+                            <ul>
+                                <li>Freelancing in your expertise area</li>
+                                <li>Online tutoring or consulting</li>
+                                <li>Small business or side hustle</li>
+                                <li>Passive income through investments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="faq-section">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Q: How much should I save each month?</h3>
+                        <p><strong>A:</strong> Aim to save at least 20% of your income. Start with whatever you can manage (even 5-10%) and gradually increase. The key is consistency rather than the amount initially.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Q: Where should I keep my emergency fund?</h3>
+                        <p><strong>A:</strong> Keep emergency funds in high-liquidity accounts like savings accounts or money market funds. Priority is access, not returns. Consider splitting between bank savings and liquid mutual funds.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Q: Should I pay off debt or save first?</h3>
+                        <p><strong>A:</strong> Build a small emergency fund first (PKR 50,000-100,000), then focus on high-interest debt. Once debt is managed, prioritize building a full emergency fund before investing.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Q: How do I start investing with small amounts?</h3>
+                        <p><strong>A:</strong> Start with mutual fund SIPs with as little as PKR 1,000 per month. Many funds in Pakistan offer low minimum investments. Focus on consistent investing rather than large amounts.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Related Financial Tools</h2>
+                    <div class="tools-grid">
+                        <a href="islamic-banking-calculator.html" class="tool-link">
+                            <i class="fas fa-mosque"></i>
+                            <span>Islamic Banking Calculator</span>
+                        </a>
+                        <a href="profit-rate-calculator.html" class="tool-link">
+                            <i class="fas fa-percentage"></i>
+                            <span>Profit Rate Calculator</span>
+                        </a>
+                        <a href="installment-calculator.html" class="tool-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Installment Calculator</span>
+                        </a>
+                        <a href="index.html" class="tool-link">
+                            <i class="fas fa-home"></i>
+                            <span>All Calculators</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer AdSense -->
+    <div class="ad-container footer-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4629347255241535"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-calculator"></i> Numera</h3>
+                    <p>Your complete financial toolkit for making informed decisions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Financial Planning</h4>
+                    <ul>
+                        <li><a href="savings-calculator.html">Savings Calculator</a></li>
+                        <li><a href="profit-rate-calculator.html">Profit Rate Calculator</a></li>
+                        <li><a href="installment-calculator.html">Installment Calculator</a></li>
+                        <li><a href="islamic-banking-calculator.html">Islamic Banking Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Numera. All rights reserved. | Built with care for your financial planning.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-new.js"></script>
+    <script>
+        let currentTab = 'goal';
+        
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            
+            document.getElementById(tab + 'Tab').classList.add('active');
+            event.target.classList.add('active');
+            currentTab = tab;
+        }
+        
+        function calculateSavings() {
+            let result = '';
+            
+            if (currentTab === 'goal') {
+                const target = parseFloat(document.getElementById('targetAmount').value);
+                const timeValue = parseInt(document.getElementById('timeValue').value);
+                const timeUnit = document.getElementById('timeUnit').value;
+                const current = parseFloat(document.getElementById('currentSavings').value) || 0;
+                const rate = parseFloat(document.getElementById('interestRate').value) || 0;
+                
+                if (!target || !timeValue) {
+                    alert('Please fill in required fields');
+                    return;
+                }
+                
+                const months = timeUnit === 'years' ? timeValue * 12 : timeValue;
+                const monthlyRate = rate / (12 * 100);
+                
+                // Calculate required monthly savings
+                const futureValueCurrent = current * Math.pow(1 + rate/100, timeValue);
+                const remainingNeeded = target - futureValueCurrent;
+                
+                let monthlySaving = 0;
+                if (remainingNeeded > 0 && rate > 0) {
+                    monthlySaving = remainingNeeded * monthlyRate / (Math.pow(1 + monthlyRate, months) - 1);
+                } else if (remainingNeeded > 0) {
+                    monthlySaving = remainingNeeded / months;
+                }
+                
+                result = `
+                    <h3>Savings Goal Results</h3>
+                    <div class="result-summary">
+                        <div class="result-item large">
+                            <span class="label">Monthly Savings Required:</span>
+                            <span class="value highlight">PKR ${monthlySaving.toLocaleString(undefined, {maximumFractionDigits: 0})}</span>
+                        </div>
+                    </div>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <span class="label">Target Amount:</span>
+                            <span class="value">PKR ${target.toLocaleString()}</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Current Savings:</span>
+                            <span class="value">PKR ${current.toLocaleString()}</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Time Period:</span>
+                            <span class="value">${timeValue} ${timeUnit}</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Expected Return:</span>
+                            <span class="value">${rate}% annually</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Growth from Current Savings:</span>
+                            <span class="value">PKR ${futureValueCurrent.toLocaleString(undefined, {maximumFractionDigits: 0})}</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Total Monthly Contributions:</span>
+                            <span class="value">PKR ${(monthlySaving * months).toLocaleString(undefined, {maximumFractionDigits: 0})}</span>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Track calculator usage
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'calculator_usage', {
+                    event_category: 'Calculator',
+                    event_label: 'Savings Calculator',
+                    value: 1
+                });
+            }
+            
+            document.getElementById('savingsResult').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

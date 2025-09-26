@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Banking Calculator - Halal Profit Rate Calculator | Numera</title>
+    <meta name="description" content="Calculate Islamic banking profit rates, installments, and savings according to Shariah principles. Free halal finance calculator with detailed explanations and examples.">
+    <meta name="keywords" content="islamic banking calculator, halal finance calculator, shariah compliant calculator, islamic profit calculator, islamic installment calculator, halal investment calculator">
+    
+    <!-- Same head content as main page -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="canonical" href="https://numera-calculators.netlify.app/islamic-banking-calculator.html">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC6133KKTD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SC6133KKTD');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4629347255241535" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html"><img src="logo.svg" alt="Numera Financial Tools" class="logo"></a>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#tools" class="nav-link">Tools</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <article class="calculator-page">
+                <header class="page-header">
+                    <h1><i class="fas fa-mosque"></i> Islamic Banking Calculator - Halal Finance Calculator</h1>
+                    <p class="page-description">Calculate Islamic banking products, profit rates, and installments according to Shariah principles. Our calculator ensures all calculations comply with Islamic finance guidelines and avoid Riba (interest).</p>
+                </header>
+
+                <!-- AdSense Top Banner -->
+                <div class="ad-container top-banner">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-4629347255241535"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <!-- Calculator Tool -->
+                <section class="calculator-section">
+                    <div class="calculator-form">
+                        <h2>Islamic Banking Profit Calculator</h2>
+                        <div class="form-group">
+                            <label for="principalAmount">Principal Amount (PKR/USD)</label>
+                            <input type="number" id="principalAmount" placeholder="e.g., 100000" min="1000">
+                        </div>
+                        <div class="form-group">
+                            <label for="profitRate">Annual Profit Rate (%)</label>
+                            <input type="number" id="profitRate" placeholder="e.g., 8.5" min="1" max="25" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="timePeriod">Time Period (Months)</label>
+                            <input type="number" id="timePeriod" placeholder="e.g., 24" min="1" max="360">
+                        </div>
+                        <div class="form-group">
+                            <label for="islamicProduct">Islamic Banking Product</label>
+                            <select id="islamicProduct">
+                                <option value="murabaha">Murabaha (Cost-Plus Financing)</option>
+                                <option value="ijara">Ijara (Islamic Leasing)</option>
+                                <option value="diminishing-musharaka">Diminishing Musharaka</option>
+                                <option value="mudaraba">Mudaraba (Profit-Sharing)</option>
+                            </select>
+                        </div>
+                        <button class="calculate-btn" onclick="calculateIslamic()">Calculate Islamic Finance</button>
+                    </div>
+                    <div id="islamicResult" class="result-section"></div>
+                </section>
+
+                <!-- Educational Content -->
+                <section class="educational-content">
+                    <h2>Understanding Islamic Banking Principles</h2>
+                    
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3><i class="fas fa-balance-scale"></i> What is Islamic Banking?</h3>
+                            <p>Islamic banking is a financial system that operates according to Shariah (Islamic law) principles. It prohibits Riba (interest), Gharar (excessive uncertainty), and Haram (forbidden) activities. Instead, it promotes risk-sharing, asset-backed financing, and ethical investments.</p>
+                            
+                            <h4>Key Principles:</h4>
+                            <ul>
+                                <li><strong>No Riba (Interest):</strong> Prohibition of predetermined interest rates</li>
+                                <li><strong>Asset-Backed Financing:</strong> All transactions must be backed by real assets</li>
+                                <li><strong>Risk Sharing:</strong> Both parties share profits and losses</li>
+                                <li><strong>Ethical Investment:</strong> No investment in prohibited industries</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card">
+                            <h3><i class="fas fa-handshake"></i> Islamic Banking Products</h3>
+                            
+                            <h4>1. Murabaha (Cost-Plus Financing)</h4>
+                            <p>The bank purchases an asset and sells it to the customer at a predetermined profit margin. The customer pays in installments over an agreed period.</p>
+                            <p><strong>Example:</strong> Bank buys a car for PKR 1,000,000 and sells it to you for PKR 1,200,000 payable over 5 years.</p>
+                            
+                            <h4>2. Ijara (Islamic Leasing)</h4>
+                            <p>The bank purchases an asset and leases it to the customer for a rental fee. At the end of the lease, the customer may purchase the asset.</p>
+                            <p><strong>Example:</strong> Leasing equipment where monthly rent covers the asset cost plus profit.</p>
+                            
+                            <h4>3. Diminishing Musharaka</h4>
+                            <p>A joint ownership arrangement where the customer gradually buys out the bank's share of an asset over time.</p>
+                            <p><strong>Example:</strong> Home financing where you start with 20% ownership and gradually increase to 100%.</p>
+                            
+                            <h4>4. Mudaraba (Profit-Sharing)</h4>
+                            <p>Investment partnership where one party provides capital and the other provides expertise. Profits are shared according to pre-agreed ratios.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h3><i class="fas fa-calculator"></i> How to Use This Calculator</h3>
+                            
+                            <h4>Step-by-Step Guide:</h4>
+                            <ol>
+                                <li><strong>Enter Principal Amount:</strong> The amount you want to finance or invest</li>
+                                <li><strong>Set Profit Rate:</strong> The annual profit rate (typically 7-15% in Pakistan)</li>
+                                <li><strong>Choose Time Period:</strong> Duration of the financing in months</li>
+                                <li><strong>Select Product Type:</strong> Choose the appropriate Islamic banking product</li>
+                                <li><strong>Calculate:</strong> Get detailed breakdown of payments and profit</li>
+                            </ol>
+                            
+                            <h4>Important Notes:</h4>
+                            <ul>
+                                <li>Profit rates in Islamic banking are based on asset returns, not predetermined interest</li>
+                                <li>Early payment discounts may be available in some Islamic products</li>
+                                <li>All calculations assume standard Islamic banking structures</li>
+                                <li>Consult with Islamic banking experts for complex transactions</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card">
+                            <h3><i class="fas fa-mosque"></i> Islamic Banking in Pakistan</h3>
+                            <p>Pakistan has a well-developed Islamic banking sector with over 20 full-fledged Islamic banks and conventional banks offering Islamic windows.</p>
+                            
+                            <h4>Popular Islamic Banks in Pakistan:</h4>
+                            <ul>
+                                <li>Meezan Bank - Pakistan's first and largest Islamic bank</li>
+                                <li>Al Baraka Bank Pakistan</li>
+                                <li>Bank Islami Pakistan</li>
+                                <li>Dubai Islamic Bank Pakistan</li>
+                                <li>Pak Qatar Family Takaful</li>
+                            </ul>
+                            
+                            <h4>Common Islamic Banking Products in Pakistan:</h4>
+                            <ul>
+                                <li><strong>Islamic Home Financing:</strong> Diminishing Musharaka-based home loans</li>
+                                <li><strong>Islamic Car Financing:</strong> Murabaha-based vehicle financing</li>
+                                <li><strong>Islamic Savings Accounts:</strong> Profit and loss sharing deposits</li>
+                                <li><strong>Islamic Investment Funds:</strong> Shariah-compliant mutual funds</li>
+                                <li><strong>Takaful Insurance:</strong> Islamic alternative to conventional insurance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AdSense Middle Banner -->
+                <div class="ad-container middle-banner">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-fb+5w+4e-db+86"
+                         data-ad-client="ca-pub-4629347255241535"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <section class="faq-section">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Q: What's the difference between Islamic banking profit and conventional interest?</h3>
+                        <p><strong>A:</strong> Islamic banking profit is earned through actual trade and asset ownership, while conventional interest is a predetermined charge on borrowed money. Islamic profit varies with market conditions and asset performance.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Q: Is Islamic banking more expensive than conventional banking?</h3>
+                        <p><strong>A:</strong> Not necessarily. While profit rates may seem similar to interest rates, Islamic banking often provides more flexibility, transparency, and asset ownership benefits that can make it more cost-effective overall.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Q: Can non-Muslims use Islamic banking services?</h3>
+                        <p><strong>A:</strong> Yes, Islamic banking services are available to everyone regardless of religion. Many non-Muslims choose Islamic banking for its ethical approach and transparency.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Q: How accurate is this calculator?</h3>
+                        <p><strong>A:</strong> Our calculator provides estimates based on standard Islamic banking structures. Actual terms may vary between banks and depend on individual circumstances. Always consult with your bank for final calculations.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Related Financial Tools</h2>
+                    <div class="tools-grid">
+                        <a href="profit-rate-calculator.html" class="tool-link">
+                            <i class="fas fa-percentage"></i>
+                            <span>Profit Rate Calculator</span>
+                        </a>
+                        <a href="installment-calculator.html" class="tool-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Installment Calculator</span>
+                        </a>
+                        <a href="savings-calculator.html" class="tool-link">
+                            <i class="fas fa-piggy-bank"></i>
+                            <span>Savings Calculator</span>
+                        </a>
+                        <a href="index.html" class="tool-link">
+                            <i class="fas fa-home"></i>
+                            <span>All Calculators</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer AdSense -->
+    <div class="ad-container footer-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4629347255241535"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-calculator"></i> Numera</h3>
+                    <p>Your complete financial toolkit for making informed decisions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="index.html">EMI Calculator</a></li>
+                        <li><a href="index.html">SIP Calculator</a></li>
+                        <li><a href="index.html">Tax Calculator</a></li>
+                        <li><a href="islamic-banking-calculator.html">Islamic Banking Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Numera. All rights reserved. | Built with care for your financial planning.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-new.js"></script>
+    <script>
+        // Islamic Banking Calculator Function
+        function calculateIslamic() {
+            const principal = parseFloat(document.getElementById('principalAmount').value);
+            const profitRate = parseFloat(document.getElementById('profitRate').value);
+            const months = parseInt(document.getElementById('timePeriod').value);
+            const product = document.getElementById('islamicProduct').value;
+            
+            if (!principal || !profitRate || !months) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // Track calculator usage
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'calculator_usage', {
+                    event_category: 'Calculator',
+                    event_label: 'Islamic Banking Calculator',
+                    value: principal
+                });
+            }
+            
+            let result = '';
+            let totalAmount = 0;
+            let monthlyPayment = 0;
+            let totalProfit = 0;
+            
+            if (product === 'murabaha') {
+                // Murabaha calculation (cost-plus financing)
+                totalProfit = (principal * profitRate * months) / (12 * 100);
+                totalAmount = principal + totalProfit;
+                monthlyPayment = totalAmount / months;
+                
+                result = `
+                    <h3>Murabaha Calculation Results</h3>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <span class="label">Principal Amount:</span>
+                            <span class="value">PKR ${principal.toLocaleString()}</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Total Profit:</span>
+                            <span class="value">PKR ${totalProfit.toLocaleString()}</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Total Amount Payable:</span>
+                            <span class="value">PKR ${totalAmount.toLocaleString()}</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Monthly Payment:</span>
+                            <span class="value">PKR ${monthlyPayment.toLocaleString()}</span>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            document.getElementById('islamicResult').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

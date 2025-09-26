@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit Rate Calculator - ROI & Investment Return Calculator | Numera</title>
+    <meta name="description" content="Calculate profit rates, ROI, and investment returns with our free profit rate calculator. Compare investment options and plan your financial future with accurate profit calculations.">
+    <meta name="keywords" content="profit rate calculator, ROI calculator, investment return calculator, profit margin calculator, business profit calculator, return on investment">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="canonical" href="https://numera-calculators.netlify.app/profit-rate-calculator.html">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC6133KKTD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SC6133KKTD');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4629347255241535" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html"><img src="logo.svg" alt="Numera Financial Tools" class="logo"></a>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#tools" class="nav-link">Tools</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <article class="calculator-page">
+                <header class="page-header">
+                    <h1><i class="fas fa-percentage"></i> Profit Rate Calculator - ROI & Investment Return Calculator</h1>
+                    <p class="page-description">Calculate profit rates, return on investment (ROI), and investment returns with precision. Compare different investment options and make informed financial decisions with our comprehensive profit calculator.</p>
+                </header>
+
+                <!-- AdSense Top Banner -->
+                <div class="ad-container top-banner">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-4629347255241535"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <!-- Calculator Tool -->
+                <section class="calculator-section">
+                    <div class="calculator-form">
+                        <h2>Profit Rate & ROI Calculator</h2>
+                        
+                        <div class="calculator-tabs">
+                            <button class="tab-btn active" onclick="switchTab('simple')">Simple Profit</button>
+                            <button class="tab-btn" onclick="switchTab('compound')">Compound Returns</button>
+                            <button class="tab-btn" onclick="switchTab('business')">Business ROI</button>
+                        </div>
+
+                        <div id="simpleTab" class="tab-content active">
+                            <h3>Simple Profit Rate Calculator</h3>
+                            <div class="form-group">
+                                <label for="initialInvestment">Initial Investment</label>
+                                <input type="number" id="initialInvestment" placeholder="e.g., 100000" min="100">
+                            </div>
+                            <div class="form-group">
+                                <label for="finalValue">Final Value</label>
+                                <input type="number" id="finalValue" placeholder="e.g., 120000" min="100">
+                            </div>
+                            <div class="form-group">
+                                <label for="timePeriodSimple">Time Period (Years)</label>
+                                <input type="number" id="timePeriodSimple" placeholder="e.g., 2" min="0.1" step="0.1">
+                            </div>
+                        </div>
+
+                        <div id="compoundTab" class="tab-content">
+                            <h3>Compound Returns Calculator</h3>
+                            <div class="form-group">
+                                <label for="principal">Principal Amount</label>
+                                <input type="number" id="principal" placeholder="e.g., 100000" min="100">
+                            </div>
+                            <div class="form-group">
+                                <label for="annualRate">Annual Interest Rate (%)</label>
+                                <input type="number" id="annualRate" placeholder="e.g., 8.5" min="0.1" max="50" step="0.1">
+                            </div>
+                            <div class="form-group">
+                                <label for="compoundFreq">Compounding Frequency</label>
+                                <select id="compoundFreq">
+                                    <option value="1">Annually</option>
+                                    <option value="2">Semi-annually</option>
+                                    <option value="4">Quarterly</option>
+                                    <option value="12" selected>Monthly</option>
+                                    <option value="365">Daily</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="years">Time Period (Years)</label>
+                                <input type="number" id="years" placeholder="e.g., 5" min="0.1" step="0.1">
+                            </div>
+                        </div>
+
+                        <div id="businessTab" class="tab-content">
+                            <h3>Business ROI Calculator</h3>
+                            <div class="form-group">
+                                <label for="totalRevenue">Total Revenue</label>
+                                <input type="number" id="totalRevenue" placeholder="e.g., 500000" min="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="totalCosts">Total Costs</label>
+                                <input type="number" id="totalCosts" placeholder="e.g., 300000" min="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="initialInvestmentBiz">Initial Investment</label>
+                                <input type="number" id="initialInvestmentBiz" placeholder="e.g., 200000" min="1">
+                            </div>
+                        </div>
+
+                        <button class="calculate-btn" onclick="calculateProfit()">Calculate Profit Rate</button>
+                    </div>
+                    <div id="profitResult" class="result-section"></div>
+                </section>
+
+                <!-- Educational Content -->
+                <section class="educational-content">
+                    <h2>Understanding Profit Rates and ROI</h2>
+                    
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3><i class="fas fa-chart-line"></i> What is Profit Rate?</h3>
+                            <p>Profit rate, also known as return on investment (ROI), measures the efficiency of an investment by comparing the profit earned to the amount invested. It's expressed as a percentage and helps investors evaluate the performance of different investments.</p>
+                            
+                            <h4>Profit Rate Formula:</h4>
+                            <div class="formula-box">
+                                <p><strong>Profit Rate = ((Final Value - Initial Investment) / Initial Investment) × 100</strong></p>
+                            </div>
+                            
+                            <h4>Example:</h4>
+                            <ul>
+                                <li>Initial Investment: PKR 100,000</li>
+                                <li>Final Value: PKR 120,000</li>
+                                <li>Profit Rate = ((120,000 - 100,000) / 100,000) × 100 = 20%</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card">
+                            <h3><i class="fas fa-calculator"></i> Types of Profit Calculations</h3>
+                            
+                            <h4>1. Simple Profit Rate</h4>
+                            <p>Calculates profit without considering the time value of money or compounding effects. Best for short-term investments or one-time transactions.</p>
+                            <p><strong>Use Case:</strong> Stock trading, real estate flipping, commodity trading</p>
+                            
+                            <h4>2. Annualized Return</h4>
+                            <p>Calculates the average yearly return over the investment period, providing a standardized measure for comparison.</p>
+                            <div class="formula-box">
+                                <p><strong>Annualized Return = ((Final Value / Initial Value)^(1/Years) - 1) × 100</strong></p>
+                            </div>
+                            
+                            <h4>3. Compound Annual Growth Rate (CAGR)</h4>
+                            <p>Measures the rate of return that would be required for an investment to grow from its beginning balance to its ending balance, assuming profits are reinvested.</p>
+                            
+                            <h4>4. Business ROI</h4>
+                            <p>Measures the profitability of business investments by comparing net profit to the initial investment cost.</p>
+                            <div class="formula-box">
+                                <p><strong>Business ROI = ((Revenue - Costs - Investment) / Investment) × 100</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <h3><i class="fas fa-lightbulb"></i> Investment Analysis Tips</h3>
+                            
+                            <h4>Evaluating Investment Performance:</h4>
+                            <ul>
+                                <li><strong>Compare to Benchmarks:</strong> Compare your returns to market indices or inflation rates</li>
+                                <li><strong>Consider Risk:</strong> Higher returns usually come with higher risks</li>
+                                <li><strong>Factor in Time:</strong> Longer investments may have different risk profiles</li>
+                                <li><strong>Account for Fees:</strong> Include transaction costs and management fees in calculations</li>
+                            </ul>
+                            
+                            <h4>Good vs. Poor Returns (Pakistan Context):</h4>
+                            <ul>
+                                <li><strong>Bank Fixed Deposits:</strong> 8-12% annually (low risk)</li>
+                                <li><strong>Government Bonds:</strong> 10-15% annually (low risk)</li>
+                                <li><strong>Stock Market:</strong> 12-18% annually (high risk)</li>
+                                <li><strong>Real Estate:</strong> 8-20% annually (medium risk)</li>
+                                <li><strong>Business Investment:</strong> 15-30%+ annually (high risk)</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card">
+                            <h3><i class="fas fa-trending-up"></i> Investment Strategies in Pakistan</h3>
+                            
+                            <h4>Popular Investment Options:</h4>
+                            
+                            <h5>1. Pakistan Stock Exchange (PSX)</h5>
+                            <p>The main stock exchange offering opportunities in various sectors like banking, textiles, fertilizer, and telecommunications.</p>
+                            <ul>
+                                <li>KSE-100 Index average return: 10-15% annually</li>
+                                <li>Blue-chip stocks: Generally safer but moderate returns</li>
+                                <li>Growth stocks: Higher potential returns with increased risk</li>
+                            </ul>
+                            
+                            <h5>2. Mutual Funds</h5>
+                            <p>Professionally managed investment pools offering diversification and expert management.</p>
+                            <ul>
+                                <li>Equity funds: 12-18% average returns</li>
+                                <li>Money market funds: 6-10% returns</li>
+                                <li>Islamic funds: Shariah-compliant options available</li>
+                            </ul>
+                            
+                            <h5>3. Real Estate</h5>
+                            <p>Property investment remains popular in major Pakistani cities.</p>
+                            <ul>
+                                <li>Residential property: 8-15% annual appreciation</li>
+                                <li>Commercial property: 10-20% returns including rental income</li>
+                                <li>REITs: Professional real estate investment trusts</li>
+                            </ul>
+                            
+                            <h5>4. Government Securities</h5>
+                            <p>Safe investment options backed by the government.</p>
+                            <ul>
+                                <li>Pakistan Investment Bonds: 10-13% returns</li>
+                                <li>National Savings Schemes: 8-12% returns</li>
+                                <li>Treasury Bills: 6-10% short-term returns</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AdSense Middle Banner -->
+                <div class="ad-container middle-banner">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-fb+5w+4e-db+86"
+                         data-ad-client="ca-pub-4629347255241535"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <section class="examples-section">
+                    <h2>Practical Examples</h2>
+                    
+                    <div class="example-grid">
+                        <div class="example-card">
+                            <h3>Example 1: Stock Investment</h3>
+                            <p><strong>Scenario:</strong> You invest PKR 50,000 in PSX stocks and after 2 years, your portfolio is worth PKR 68,000.</p>
+                            <div class="calculation">
+                                <p><strong>Calculation:</strong></p>
+                                <p>Total Return = (68,000 - 50,000) / 50,000 × 100 = 36%</p>
+                                <p>Annualized Return = (68,000/50,000)^(1/2) - 1 = 16.6% per year</p>
+                            </div>
+                        </div>
+                        
+                        <div class="example-card">
+                            <h3>Example 2: Business Investment</h3>
+                            <p><strong>Scenario:</strong> You start a small business with PKR 200,000. After one year, your revenue is PKR 800,000 and costs are PKR 500,000.</p>
+                            <div class="calculation">
+                                <p><strong>Calculation:</strong></p>
+                                <p>Net Profit = 800,000 - 500,000 = 300,000</p>
+                                <p>ROI = (300,000 - 200,000) / 200,000 × 100 = 50%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="example-card">
+                            <h3>Example 3: Real Estate</h3>
+                            <p><strong>Scenario:</strong> You buy a property for PKR 3,000,000. After 3 years, you sell it for PKR 4,200,000, earning PKR 180,000 in rent.</p>
+                            <div class="calculation">
+                                <p><strong>Calculation:</strong></p>
+                                <p>Total Return = (4,200,000 + 180,000 - 3,000,000) / 3,000,000 × 100</p>
+                                <p>Total Return = 46% over 3 years</p>
+                                <p>Annualized Return = 13.6% per year</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="faq-section">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Q: What's a good profit rate for investments?</h3>
+                        <p><strong>A:</strong> A good profit rate depends on the investment type and risk level. In Pakistan, 10-15% annually is considered good for diversified portfolios. Always compare against inflation (typically 7-12% in Pakistan) and consider the risk involved.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Q: How do I calculate profit rate for multiple investments?</h3>
+                        <p><strong>A:</strong> For a portfolio, calculate the weighted average return based on the amount invested in each asset. Add up all gains/losses and divide by the total investment amount.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Q: Should I consider inflation in profit calculations?</h3>
+                        <p><strong>A:</strong> Yes, real returns (profit rate minus inflation) give you the actual purchasing power gained. If your investment returns 12% but inflation is 8%, your real return is only 4%.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Q: How often should I calculate my investment returns?</h3>
+                        <p><strong>A:</strong> For long-term investments, quarterly or annual reviews are sufficient. For active trading, monthly calculations help track performance. Avoid daily calculations as they can lead to emotional decision-making.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Related Financial Tools</h2>
+                    <div class="tools-grid">
+                        <a href="islamic-banking-calculator.html" class="tool-link">
+                            <i class="fas fa-mosque"></i>
+                            <span>Islamic Banking Calculator</span>
+                        </a>
+                        <a href="installment-calculator.html" class="tool-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Installment Calculator</span>
+                        </a>
+                        <a href="savings-calculator.html" class="tool-link">
+                            <i class="fas fa-piggy-bank"></i>
+                            <span>Savings Calculator</span>
+                        </a>
+                        <a href="index.html" class="tool-link">
+                            <i class="fas fa-home"></i>
+                            <span>All Calculators</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer AdSense -->
+    <div class="ad-container footer-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4629347255241535"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-calculator"></i> Numera</h3>
+                    <p>Your complete financial toolkit for making informed decisions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Calculators</h4>
+                    <ul>
+                        <li><a href="profit-rate-calculator.html">Profit Rate Calculator</a></li>
+                        <li><a href="islamic-banking-calculator.html">Islamic Banking Calculator</a></li>
+                        <li><a href="installment-calculator.html">Installment Calculator</a></li>
+                        <li><a href="savings-calculator.html">Savings Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Numera. All rights reserved. | Built with care for your financial planning.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-new.js"></script>
+    <script>
+        let currentTab = 'simple';
+        
+        function switchTab(tab) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tab + 'Tab').classList.add('active');
+            event.target.classList.add('active');
+            currentTab = tab;
+        }
+        
+        function calculateProfit() {
+            let result = '';
+            
+            if (currentTab === 'simple') {
+                const initial = parseFloat(document.getElementById('initialInvestment').value);
+                const final = parseFloat(document.getElementById('finalValue').value);
+                const time = parseFloat(document.getElementById('timePeriodSimple').value);
+                
+                if (!initial || !final || !time) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+                
+                const totalReturn = ((final - initial) / initial) * 100;
+                const annualizedReturn = (Math.pow(final / initial, 1 / time) - 1) * 100;
+                const profit = final - initial;
+                
+                result = `
+                    <h3>Simple Profit Rate Results</h3>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <span class="label">Total Profit:</span>
+                            <span class="value">PKR ${profit.toLocaleString()}</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Total Return:</span>
+                            <span class="value">${totalReturn.toFixed(2)}%</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Annualized Return:</span>
+                            <span class="value">${annualizedReturn.toFixed(2)}% per year</span>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Track calculator usage
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'calculator_usage', {
+                    event_category: 'Calculator',
+                    event_label: 'Profit Rate Calculator',
+                    value: 1
+                });
+            }
+            
+            document.getElementById('profitResult').innerHTML = result;
+        }
+    </script>
+</body>
+</html>
