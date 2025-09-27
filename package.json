@@ -34,10 +34,10 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/financial-tools-suite.git"
+    "url": "git+https://github.com/asadk0207-hub/numera-finance.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/financial-tools-suite/issues"
+    "url": "https://github.com/asadk0207-hub/numera-finance/issues"
   },
-  "homepage": "https://yourusername.github.io/financial-tools-suite/"
+  "homepage": "https://asadk0207-hub.github.io/numera-finance/"
 }
