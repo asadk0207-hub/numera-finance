@@ -61,6 +61,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     
     <!-- PWA Manifest -->
@@ -91,8 +92,14 @@
       });
     </script>
     
-    <!-- Google AdSense Verification Code -->
+    <!-- Google AdSense Auto Ads -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4629347255241535" crossorigin="anonymous"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-4629347255241535",
+            enable_page_level_ads: true
+        });
+    </script>
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -120,9 +127,9 @@
             "name": "Numera",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://numera-calculators.netlify.app/logo.png",
-                "width": 300,
-                "height": 100
+                "url": "https://numera-calculators.netlify.app/logo.svg",
+                "width": 200,
+                "height": 60
             }
         },
         "datePublished": "2024-01-01",
@@ -200,13 +207,13 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-brand">
-                    <i class="fas fa-calculator"></i>
-                    <span>Numera</span>
+                    <img src="logo.svg" alt="Numera Financial Tools" class="logo">
                 </div>
                 <div class="nav-menu">
                     <a href="#home" class="nav-link active">Home</a>
                     <a href="#tools" class="nav-link">Tools</a>
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
                     <button class="theme-toggle" id="themeToggle">
                         <i class="fas fa-moon"></i>
                     </button>
@@ -226,27 +233,14 @@
         </div>
     </section>
 
-    <!-- Google AdSense Setup -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4629347255241535" crossorigin="anonymous"></script>
-    
     <!-- Top Banner Ad -->
     <div class="ad-container top-banner">
         <ins class="adsbygoogle"
              style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="1234567890"
+             data-ad-client="ca-pub-4629347255241535"
+             data-ad-slot="AUTO_AD_UNIT_1"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-        <!-- Banner Ad -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
-             data-ad-slot="XXXXXXXXX"
-             data-ad-format="auto"></ins>
         <script>
              (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
@@ -286,12 +280,33 @@
                     <h3 itemprop="name">Scientific Calculator - Advanced Calculator</h3>
                     <p itemprop="description">Advanced <strong>scientific calculator</strong> with trigonometry, logarithms, memory functions, and more. Perfect for students and professionals.</p>
                 </article>
-                <article class="tool-card" data-tool="zakat" itemscope itemtype="https://schema.org/WebApplication">
+                <article class="tool-card" itemscope itemtype="https://schema.org/WebApplication">
                     <div class="tool-icon">
-                        <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                        <i class="fas fa-mosque" aria-hidden="true"></i>
                     </div>
-                    <h3 itemprop="name">Zakat Calculator - Islamic Finance Calculator</h3>
-                    <p itemprop="description">Calculate your <strong>Zakat obligations</strong> according to Islamic finance principles. Includes gold, silver, cash, and investment calculations.</p>
+                    <h3 itemprop="name"><a href="islamic-banking-calculator.html">Islamic Banking Calculator - Halal Finance</a></h3>
+                    <p itemprop="description">Calculate <strong>Islamic banking</strong> products, profit rates, and installments according to Shariah principles. Halal finance calculator with detailed guidance.</p>
+                </article>
+                <article class="tool-card" itemscope itemtype="https://schema.org/WebApplication">
+                    <div class="tool-icon">
+                        <i class="fas fa-percentage" aria-hidden="true"></i>
+                    </div>
+                    <h3 itemprop="name"><a href="profit-rate-calculator.html">Profit Rate Calculator - ROI & Returns</a></h3>
+                    <p itemprop="description">Calculate <strong>profit rates, ROI</strong>, and investment returns. Compare investment options and plan your financial future with accurate calculations.</p>
+                </article>
+                <article class="tool-card" itemscope itemtype="https://schema.org/WebApplication">
+                    <div class="tool-icon">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                    </div>
+                    <h3 itemprop="name"><a href="installment-calculator.html">Installment Calculator - EMI & Loans</a></h3>
+                    <p itemprop="description">Calculate <strong>loan installments, EMI</strong> payments, and monthly payment plans. Plan your finances with accurate payment calculations.</p>
+                </article>
+                <article class="tool-card" itemscope itemtype="https://schema.org/WebApplication">
+                    <div class="tool-icon">
+                        <i class="fas fa-piggy-bank" aria-hidden="true"></i>
+                    </div>
+                    <h3 itemprop="name"><a href="savings-calculator.html">Savings Calculator - Goal Planning</a></h3>
+                    <p itemprop="description">Plan your <strong>savings goals</strong> and calculate investment growth. Set financial targets and track progress toward your objectives.</p>
                 </article>
             </div>
         </div>
@@ -328,13 +343,12 @@
         <div id="emiResult" class="result-section"></div>
         <!-- AdSense Inline Ad -->
         <div class="inline-ad">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins class="adsbygoogle"
                  style="display:block"
                  data-ad-format="fluid"
                  data-ad-layout-key="-fb+5w+4e-db+86"
-                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
-                 data-ad-slot="XXXXXXXXX"></ins>
+                 data-ad-client="ca-pub-4629347255241535"
+                 data-ad-slot="AUTO_AD_UNIT_2"></ins>
             <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
@@ -528,12 +542,12 @@
 
     <!-- Google AdSense Footer Ad -->
     <div class="ad-banner footer-ad">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Footer Banner Ad -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4629347255241535" crossorigin="anonymous"></script>
+        <!-- Footer Display Ad - Replace SLOT_ID with your actual ad slot ID -->
         <ins class="adsbygoogle"
              style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
-             data-ad-slot="XXXXXXXXX"
+             data-ad-client="ca-pub-4629347255241535"
+             data-ad-slot="AUTO_SLOT_WILL_BE_REPLACED"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
         <script>
@@ -565,12 +579,13 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    </div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">

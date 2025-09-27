@@ -132,10 +132,34 @@ body {
     font-weight: 700;
     color: var(--primary-color);
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.nav-brand i {
-    font-size: var(--font-size-2xl);
+.nav-brand:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+/* Logo Styles */
+.logo {
+    height: 40px;
+    width: auto;
+    max-width: 160px;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+
+/* Dark theme logo adjustments */
+[data-theme="dark"] .logo {
+    filter: brightness(1.1);
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+    .logo {
+        height: 32px;
+        max-width: 120px;
+    }
 }
 
 .nav-menu {

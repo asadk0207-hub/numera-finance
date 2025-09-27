@@ -200,6 +200,26 @@ function showError(message) {
     alert(message);
 }
 
+// Google Ads Conversion Tracking
+function trackConversion(calculatorType) {
+    // Track calculator usage for Google Ads
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL', // Will be replaced with actual conversion ID
+            'event_category': 'Calculator Usage',
+            'event_label': calculatorType,
+            'value': 1
+        });
+        
+        // Also track as a custom event
+        gtag('event', 'calculator_use', {
+            'event_category': 'Engagement',
+            'event_label': calculatorType,
+            'value': 1
+        });
+    }
+}
+
 // EMI Calculator
 function calculateEMI() {
     const loanAmount = parseFloat(document.getElementById('loanAmount').value);
@@ -259,6 +279,9 @@ function calculateEMI() {
     const resultDiv = document.getElementById('emiResult');
     if (resultDiv) {
         resultDiv.innerHTML = resultHTML;
+        
+        // Track successful EMI calculation for Google Ads
+        trackConversion('EMI Calculator');
     }
 }
 
@@ -319,6 +342,9 @@ function calculateSIP() {
     const resultDiv = document.getElementById('sipResult');
     if (resultDiv) {
         resultDiv.innerHTML = resultHTML;
+        
+        // Track successful SIP calculation for Google Ads
+        trackConversion('SIP Calculator');
     }
 }
 
@@ -416,6 +442,9 @@ function calculateTax() {
     const resultDiv = document.getElementById('taxResult');
     if (resultDiv) {
         resultDiv.innerHTML = resultHTML;
+        
+        // Track successful Tax calculation for Google Ads
+        trackConversion('Tax Calculator');
     }
 }
 
