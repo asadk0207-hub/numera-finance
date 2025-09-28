@@ -20,6 +20,9 @@ Allow: /logo.svg
 # Sitemap location - Updated for Vercel
 Sitemap: https://numera-finance-lk9a.vercel.app/sitemap.xml
 
+# Additional sitemap references for better discovery
+Sitemap: https://numera-finance-lk9a.vercel.app/sitemap.xml
+
 # Crawl delay for respectful crawling
 Crawl-delay: 1
 
