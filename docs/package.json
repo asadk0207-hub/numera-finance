@@ -6,8 +6,8 @@
   "scripts": {
     "start": "live-server --port=3000 --open=/index.html",
     "build": "npm run minify-css && npm run minify-js",
-    "minify-css": "cleancss -o css/styles.min.css css/styles.css",
-    "minify-js": "uglifyjs js/app.js -c -m -o js/app.min.js",
+    "minify-css": "cleancss -o styles.min.css styles.css",
+    "minify-js": "uglifyjs script.js -c -m -o script.min.js",
     "deploy": "gh-pages -d .",
     "test": "echo \"No tests specified\" && exit 0"
   },

@@ -1,0 +1,23 @@
+{
+  "buildCommand": "echo 'No build step required'",
+  "outputDirectory": "docs",
+  "framework": "vanilla",
+  "functions": {},
+  "rewrites": [
+    {
+      "source": "/ads.txt",
+      "destination": "/docs/ads.txt"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/ads.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    }
+  ]
+}
