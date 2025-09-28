@@ -1,19 +1,22 @@
 {
   "version": 2,
-  "public": true,
-  "buildCommand": null,
-  "outputDirectory": "docs",
-  "installCommand": "echo 'No install needed'",
-  "framework": null,
-  "headers": [
+  "builds": [
     {
-      "source": "/ads.txt",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/plain; charset=utf-8"
-        }
-      ]
+      "src": "docs/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/ads.txt",
+      "dest": "/docs/ads.txt",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/docs/$1"
     }
   ]
 }

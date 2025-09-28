@@ -2,13 +2,13 @@
   "name": "financial-tools-suite",
   "version": "1.0.0",
   "description": "A comprehensive suite of financial calculators and tools",
-  "main": "index.html",
+  "main": "docs/index.html",
   "scripts": {
-    "build": "exit 0",
-    "test": "exit 0"
+    "build": "echo 'Build completed successfully' && exit 0"
   },
   "keywords": ["financial", "calculator", "tools"],
   "author": "Financial Tools Suite",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {}
 }
