@@ -101,6 +101,20 @@
         });
     </script>
     
+    <!-- ads.txt handler -->
+    <script>
+        // Handle ads.txt requests
+        if (window.location.pathname === '/ads.txt' || window.location.pathname.endsWith('/ads.txt')) {
+            document.addEventListener('DOMContentLoaded', function() {
+                document.body.innerHTML = 'google.com, pub-4629347255241535, DIRECT, f08c47fec0942fa0';
+                document.body.style.fontFamily = 'monospace';
+                document.body.style.whiteSpace = 'pre';
+                document.head.innerHTML = '<meta charset="UTF-8"><title>ads.txt</title>';
+                document.contentType = 'text/plain';
+            });
+        }
+    </script>
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
