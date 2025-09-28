@@ -1,0 +1,86 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an EMI Calculator and how does it work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An EMI Calculator helps you calculate the Equated Monthly Installment for loans. It uses the loan amount, interest rate, and tenure to determine your monthly payment. The formula considers both principal and interest components to give you an accurate monthly payment amount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate are the financial calculations on Numera?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Numera's financial calculators use industry-standard formulas and are highly accurate. All calculations are performed using precise mathematical algorithms that banks and financial institutions use. However, actual loan terms may vary slightly based on lender policies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a SIP Calculator and why should I use it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A SIP Calculator helps you calculate returns on Systematic Investment Plans in mutual funds. It shows how regular monthly investments can grow over time with compound interest, helping you plan for financial goals like retirement, children's education, or wealth creation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Numera's financial calculators free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, all financial calculators on Numera are completely free to use. There are no hidden charges, registration requirements, or premium features. Our mission is to make financial planning tools accessible to everyone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Islamic Banking Calculator different from regular calculators?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Islamic Banking Calculators follow Sharia-compliant principles that prohibit interest (riba). Instead, they calculate profit-sharing rates, diminishing musharakah, and other halal financial structures. These calculators help Muslims make financial decisions that align with Islamic finance principles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate home loan EMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To calculate home loan EMI, enter your loan amount, interest rate, and tenure in years into our EMI calculator. The tool will instantly show your monthly installment, total interest payable, and total amount. You can also view a detailed amortization schedule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use these calculators for tax planning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our calculators help with tax planning by showing you the tax implications of different investment options. You can calculate tax savings through SIP investments in ELSS funds, home loan interest deductions, and other tax-saving instruments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between simple and compound interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simple interest is calculated only on the principal amount, while compound interest is calculated on both principal and accumulated interest. Our calculators clearly show the difference and help you understand how compound interest accelerates wealth creation in long-term investments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I use financial calculators for planning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use financial calculators whenever you're making financial decisions - before taking loans, starting investments, or planning for goals. Regular use helps you stay informed about changing interest rates, compare different options, and adjust your financial strategy as needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you store my financial data or personal information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Numera does not store any personal financial data you enter into the calculators. All calculations are performed locally in your browser, ensuring complete privacy and security of your sensitive financial information."
+      }
+    }
+  ]
+}
