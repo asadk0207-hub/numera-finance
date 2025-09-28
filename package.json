@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "A comprehensive suite of financial calculators and tools",
   "main": "docs/index.html",
-  "scripts": {
-    "build": "echo 'Build completed successfully' && exit 0"
-  },
+  "scripts": {},
   "keywords": ["financial", "calculator", "tools"],
   "author": "Financial Tools Suite",
   "license": "MIT",

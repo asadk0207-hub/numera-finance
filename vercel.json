@@ -1,22 +1,29 @@
 {
-  "version": 2,
-  "builds": [
+  "trailingSlash": false,
+  "cleanUrls": true,
+  "public": false,
+  "github": {
+    "autoDeployments": true
+  },
+  "rewrites": [
     {
-      "src": "docs/**/*",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/ads.txt",
-      "dest": "/docs/ads.txt",
-      "headers": {
-        "Content-Type": "text/plain; charset=utf-8"
-      }
+      "source": "/ads.txt",
+      "destination": "/docs/ads.txt"
     },
     {
-      "src": "/(.*)",
-      "dest": "/docs/$1"
+      "source": "/(.*)",
+      "destination": "/docs/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/ads.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
     }
   ]
 }

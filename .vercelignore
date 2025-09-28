@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log*
+.npm
+.DS_Store
+*.log
+.git
+.gitignore
+README.md
+DEPLOYMENT.md
+*.ps1
+*.toml
+.nojekyll
