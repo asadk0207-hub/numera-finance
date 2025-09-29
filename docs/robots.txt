@@ -1,0 +1,50 @@
+User-agent: *
+Allow: /
+
+# Disallow crawling of potentially sensitive or unnecessary files
+Disallow: /script-new.js
+Disallow: /script.js
+Disallow: /ads-txt-solution.html
+Disallow: /analytics-test-simple.html
+Disallow: /ads.html
+Disallow: /test-analytics.html
+Disallow: /generate-ads.js
+
+# Allow specific files that are important for SEO
+Allow: /sitemap.xml
+Allow: /manifest.json
+Allow: /ads.txt
+Allow: /favicon.svg
+Allow: /logo.svg
+
+# Sitemap location - Updated for Vercel
+Sitemap: https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/sitemap.xml
+
+# Additional sitemap references for better discovery
+Sitemap: https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Allow major search engines with specific instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /

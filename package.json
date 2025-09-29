@@ -1,43 +1,7 @@
 {
-  "name": "financial-tools-suite",
+  "name": "numera-finance",
   "version": "1.0.0",
-  "description": "A comprehensive suite of financial calculators and tools including EMI, SIP, Income Tax, Currency Converter, Zakat, and Savings Goal Tracker",
-  "main": "index.html",
-  "scripts": {
-    "start": "live-server --port=3000 --open=/index.html",
-    "build": "npm run minify-css && npm run minify-js",
-    "minify-css": "cleancss -o css/styles.min.css css/styles.css",
-    "minify-js": "uglifyjs js/app.js -c -m -o js/app.min.js",
-    "deploy": "gh-pages -d .",
-    "test": "echo \"No tests specified\" && exit 0"
-  },
-  "keywords": [
-    "financial",
-    "calculator",
-    "EMI",
-    "SIP",
-    "tax",
-    "currency",
-    "zakat",
-    "savings",
-    "fintech",
-    "tools"
-  ],
-  "author": "Financial Tools Suite",
-  "license": "MIT",
-  "devDependencies": {
-    "clean-css-cli": "^5.6.2",
-    "gh-pages": "^6.0.0",
-    "live-server": "^1.2.2",
-    "uglify-js": "^3.17.4"
-  },
-  "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yourusername/financial-tools-suite.git"
-  },
-  "bugs": {
-    "url": "https://github.com/yourusername/financial-tools-suite/issues"
-  },
-  "homepage": "https://yourusername.github.io/financial-tools-suite/"
+  "private": true,
+  "scripts": {},
+  "dependencies": {}
 }

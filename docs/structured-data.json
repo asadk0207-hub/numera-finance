@@ -1,0 +1,133 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/#website",
+      "url": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/",
+      "name": "Numera - Financial Calculator Suite",
+      "description": "Free online financial calculators for EMI, SIP, Tax, Zakat, and Investment planning. Professional-grade financial tools accessible to everyone.",
+      "publisher": {
+        "@id": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/#organization"
+      },
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      ],
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/#organization",
+      "name": "Numera Financial Tools",
+      "alternateName": "Numera",
+      "url": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/logo.svg",
+        "contentUrl": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/logo.svg",
+        "width": 300,
+        "height": 100
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/contact.html"
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/#webapplication",
+      "url": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/",
+      "name": "Numera Financial Calculator Suite",
+      "applicationCategory": "FinanceApplication",
+      "applicationSubCategory": "Financial Planning Tools",
+      "operatingSystem": "Web Browser",
+      "description": "Comprehensive suite of free financial calculators including EMI calculator, SIP calculator, income tax estimator, Zakat calculator, and scientific calculator for all your financial planning needs.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "description": "Free to use financial calculators"
+      },
+      "featureList": [
+        "EMI Calculator - Calculate loan installments",
+        "SIP Calculator - Investment planning",
+        "Income Tax Calculator - Tax estimation",
+        "Zakat Calculator - Islamic finance",
+        "Scientific Calculator - Advanced calculations",
+        "Savings Calculator - Goal planning",
+        "Islamic Banking Calculator - Sharia-compliant finance"
+      ],
+      "isAccessibleForFree": true,
+      "hasPart": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "EMI Calculator",
+          "description": "Calculate Equated Monthly Installments for home loans, car loans, and personal loans with detailed amortization schedule.",
+          "url": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/installment-calculator.html",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web Browser",
+          "isAccessibleForFree": true
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "SIP Calculator",
+          "description": "Calculate returns on Systematic Investment Plans (SIP) for mutual funds and long-term wealth creation.",
+          "url": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/savings-calculator.html",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web Browser",
+          "isAccessibleForFree": true
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Islamic Banking Calculator",
+          "description": "Sharia-compliant financial calculations for Islamic banking and finance products.",
+          "url": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/islamic-banking-calculator.html",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web Browser",
+          "isAccessibleForFree": true
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Profit Rate Calculator",
+          "description": "Calculate profit rates and returns for various investment instruments and financial products.",
+          "url": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/profit-rate-calculator.html",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web Browser",
+          "isAccessibleForFree": true
+        }
+      ],
+      "keywords": "financial calculator, EMI calculator, SIP calculator, tax calculator, Islamic finance, loan calculator, investment planning, financial tools",
+      "datePublished": "2024-01-01",
+      "dateModified": "2025-09-28",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Financial Calculators",
+          "item": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/#calculators"
+        }
+      ]
+    }
+  ]
+}

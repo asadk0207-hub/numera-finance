@@ -1,0 +1,94 @@
+{
+  "pages": [
+    {
+      "url": "/",
+      "title": "Free Financial Calculator Suite - EMI, SIP, Tax & Investment Tools | Numera",
+      "description": "Professional financial calculators for EMI, SIP, tax planning, Zakat, and investment analysis. 100% free, accurate, and easy-to-use financial planning tools.",
+      "keywords": ["financial calculator", "EMI calculator", "SIP calculator", "tax calculator", "investment calculator", "loan calculator", "free financial tools"],
+      "category": "Financial Tools",
+      "purpose": "Main hub for all financial calculation needs",
+      "targetAudience": "Individuals, financial planners, loan seekers, investors"
+    },
+    {
+      "url": "/installment-calculator.html",
+      "title": "EMI Calculator - Calculate Loan Installments | Home, Car, Personal Loans",
+      "description": "Calculate monthly EMI for home loans, car loans, and personal loans. Get detailed breakdown with principal, interest, and amortization schedule.",
+      "keywords": ["EMI calculator", "loan calculator", "home loan EMI", "car loan calculator", "personal loan EMI", "installment calculator"],
+      "category": "Loan Calculators",
+      "purpose": "Calculate Equated Monthly Installments for various types of loans",
+      "targetAudience": "Home buyers, car buyers, loan seekers"
+    },
+    {
+      "url": "/savings-calculator.html",
+      "title": "SIP Calculator - Mutual Fund Investment Returns & Goal Planning",
+      "description": "Calculate SIP returns for mutual fund investments. Plan your financial goals with systematic investment planning and wealth creation strategies.",
+      "keywords": ["SIP calculator", "mutual fund calculator", "investment calculator", "SIP returns", "wealth creation", "financial planning"],
+      "category": "Investment Calculators",
+      "purpose": "Calculate returns on systematic investment plans and mutual fund investments",
+      "targetAudience": "Investors, financial planners, wealth builders"
+    },
+    {
+      "url": "/islamic-banking-calculator.html",
+      "title": "Islamic Banking Calculator - Sharia Compliant Financial Tools",
+      "description": "Sharia-compliant financial calculations for Islamic banking products. Calculate profits and returns according to Islamic finance principles.",
+      "keywords": ["Islamic banking calculator", "Sharia compliant calculator", "Islamic finance", "halal investment calculator", "Islamic loan calculator"],
+      "category": "Islamic Finance",
+      "purpose": "Provide Sharia-compliant financial calculations for Islamic banking",
+      "targetAudience": "Muslims, Islamic banking customers, Sharia-compliant investors"
+    },
+    {
+      "url": "/profit-rate-calculator.html",
+      "title": "Profit Rate Calculator - Calculate Investment Returns & ROI",
+      "description": "Calculate profit rates, ROI, and returns on various investment instruments. Analyze profitability of financial products and investment opportunities.",
+      "keywords": ["profit calculator", "ROI calculator", "return calculator", "investment return calculator", "profit rate calculator"],
+      "category": "Investment Analysis",
+      "purpose": "Calculate profit rates and returns on investments",
+      "targetAudience": "Investors, business owners, financial analysts"
+    },
+    {
+      "url": "/about.html",
+      "title": "About Numera - Free Financial Calculator Suite",
+      "description": "Learn about Numera's mission to provide free, accurate financial calculators for everyone. Professional financial planning tools made accessible.",
+      "keywords": ["about numera", "financial tools", "free calculators", "financial planning"],
+      "category": "About",
+      "purpose": "Information about the platform and its mission",
+      "targetAudience": "General users, potential customers"
+    },
+    {
+      "url": "/contact.html",
+      "title": "Contact Numera - Support for Financial Calculators",
+      "description": "Contact Numera for support, feedback, or questions about our financial calculators. Get help with EMI, SIP, tax, and investment calculations.",
+      "keywords": ["contact numera", "support", "help", "financial calculator support"],
+      "category": "Support",
+      "purpose": "Provide contact information and support channels",
+      "targetAudience": "Users needing support or wanting to provide feedback"
+    },
+    {
+      "url": "/privacy-policy.html",
+      "title": "Privacy Policy - Numera Financial Calculators",
+      "description": "Privacy policy for Numera financial calculators. Learn how we protect your data and ensure privacy while using our financial tools.",
+      "keywords": ["privacy policy", "data protection", "privacy"],
+      "category": "Legal",
+      "purpose": "Explain privacy practices and data handling",
+      "targetAudience": "All users for compliance and transparency"
+    },
+    {
+      "url": "/terms-of-service.html",
+      "title": "Terms of Service - Numera Financial Calculator Suite",
+      "description": "Terms of service for using Numera financial calculators. Understand the terms and conditions for using our free financial planning tools.",
+      "keywords": ["terms of service", "terms and conditions", "legal terms"],
+      "category": "Legal",
+      "purpose": "Define terms and conditions for platform usage",
+      "targetAudience": "All users for legal compliance"
+    }
+  ],
+  "siteInfo": {
+    "domain": "https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app",
+    "siteName": "Numera Financial Calculator Suite",
+    "language": "en-US",
+    "charset": "UTF-8",
+    "lastModified": "2025-09-28",
+    "totalPages": 9,
+    "mainCategories": ["Financial Tools", "Loan Calculators", "Investment Calculators", "Islamic Finance", "Support", "Legal"]
+  }
+}
