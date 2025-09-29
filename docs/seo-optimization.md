@@ -51,15 +51,15 @@
 <title>Primary Keyword | Secondary Keyword | Brand</title>
 <meta name="description" content="150-160 character description with primary keyword">
 <meta name="keywords" content="primary, secondary, long-tail keywords">
-<link rel="canonical" href="https://numera-finance-lk9a.vercel.app/page-url">
+<link rel="canonical" href="https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/page-url">
 ```
 
 #### Open Graph Tags:
 ```html
 <meta property="og:title" content="Page Title">
 <meta property="og:description" content="Page Description">
-<meta property="og:image" content="https://numera-finance-lk9a.vercel.app/logo.svg">
-<meta property="og:url" content="https://numera-finance-lk9a.vercel.app/page-url">
+<meta property="og:image" content="https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/logo.svg">
+<meta property="og:url" content="https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/page-url">
 ```
 
 #### Structured Data Types Used:
