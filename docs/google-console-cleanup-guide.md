@@ -3,7 +3,7 @@
 ## 🎯 Goal: Clean up old URLs and set up your new Vercel URL properly
 
 ### **Your Current Situation:**
-- **NEW URL (Keep):** `https://numera-finance-lk9a.vercel.app`
+- **NEW URL (Keep):** `https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app`
 - **OLD URLs (Remove):** All Netlify, GitHub Pages, old Vercel URLs
 
 ---
@@ -34,7 +34,7 @@ For each OLD property that has data:
 1. In Search Console, click property selector
 2. Look for **"Add property"** or **"+"**
 3. Choose **"URL prefix"**
-4. Enter: `https://numera-finance-lk9a.vercel.app`
+4. Enter: `https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app`
 
 ### **Step 2: Verify Ownership**
 **Method A - HTML Tag (Recommended):**
@@ -62,7 +62,7 @@ For each OLD property that has data:
 ### **For Netlify (if still accessible):**
 1. Add to `_redirects` file:
    ```
-   https://old-netlify-url.netlify.app/* https://numera-finance-lk9a.vercel.app/:splat 301!
+   https://old-netlify-url.netlify.app/* https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/:splat 301!
    ```
 
 ### **For GitHub Pages (if used):**
@@ -83,7 +83,7 @@ For each OLD property that has data:
 ### **Week 2-4: Check Traffic Transfer**
 1. Compare traffic between old and new properties
 2. Search for your main keywords to see which URL ranks
-3. Check: `site:numera-finance-lk9a.vercel.app` in Google
+3. Check: `site:numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app` in Google
 
 ---
 

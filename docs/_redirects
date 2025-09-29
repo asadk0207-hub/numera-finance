@@ -2,8 +2,8 @@
 # Place this file in your old Netlify site if still accessible
 
 # Redirect all traffic from old Netlify to new Vercel URL
-https://numera-finance.netlify.app/* https://numera-finance-lk9a.vercel.app/:splat 301!
-https://numera-calculators.netlify.app/* https://numera-finance-lk9a.vercel.app/:splat 301!
+https://numera-finance.netlify.app/* https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/:splat 301!
+https://numera-calculators.netlify.app/* https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/:splat 301!
 
 # Specific redirects for important pages
 /installment-calculator.html https://numera-finance-lk9a.vercel.app/installment-calculator.html 301!
