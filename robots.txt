@@ -11,7 +11,7 @@ Allow: /sitemap.xml
 Allow: /manifest.json
 
 # Sitemap location
-Sitemap: https://numera-finance-lk9a-nis9jr0iq-asadk0207-hubs-projects.vercel.app/sitemap.xml
+Sitemap: https://numera-finance-lk9a.vercel.app/sitemap.xml
 
 # Crawl delay for respectful crawling
 Crawl-delay: 1
