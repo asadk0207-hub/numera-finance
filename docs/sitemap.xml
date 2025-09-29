@@ -14,7 +14,7 @@
 
     <!-- About Page -->
     <url>
-        <loc>https://numera-finance-lk9a.vercel.app/about.html</loc>
+        <loc>https://numera-finance-lk9a.vercel.app/about</loc>
         <lastmod>2025-09-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -22,7 +22,7 @@
 
     <!-- Contact Page -->
     <url>
-        <loc>https://numera-finance-lk9a.vercel.app/contact.html</loc>
+        <loc>https://numera-finance-lk9a.vercel.app/contact</loc>
         <lastmod>2025-09-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -32,7 +32,7 @@
     
     <!-- Installment Calculator (EMI) -->
     <url>
-        <loc>https://numera-finance-lk9a.vercel.app/installment-calculator.html</loc>
+        <loc>https://numera-finance-lk9a.vercel.app/installment-calculator</loc>
         <lastmod>2025-09-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -40,7 +40,7 @@
 
     <!-- Islamic Banking Calculator -->
     <url>
-        <loc>https://numera-finance-lk9a.vercel.app/islamic-banking-calculator.html</loc>
+        <loc>https://numera-finance-lk9a.vercel.app/islamic-banking-calculator</loc>
         <lastmod>2025-09-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -48,7 +48,7 @@
 
     <!-- Profit Rate Calculator -->
     <url>
-        <loc>https://numera-finance-lk9a.vercel.app/profit-rate-calculator.html</loc>
+        <loc>https://numera-finance-lk9a.vercel.app/profit-rate-calculator</loc>
         <lastmod>2025-09-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -56,7 +56,7 @@
 
     <!-- Savings Calculator -->
     <url>
-        <loc>https://numera-finance-lk9a.vercel.app/savings-calculator.html</loc>
+        <loc>https://numera-finance-lk9a.vercel.app/savings-calculator</loc>
         <lastmod>2025-09-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -64,7 +64,7 @@
 
     <!-- Manual Submission Page -->
     <url>
-        <loc>https://numera-finance-lk9a.vercel.app/manual-submission.html</loc>
+        <loc>https://numera-finance-lk9a.vercel.app/manual-submission</loc>
         <lastmod>2025-09-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -74,7 +74,7 @@
     
     <!-- Privacy Policy -->
     <url>
-        <loc>https://numera-finance-lk9a.vercel.app/privacy-policy.html</loc>
+        <loc>https://numera-finance-lk9a.vercel.app/privacy-policy</loc>
         <lastmod>2025-09-29</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.4</priority>
@@ -82,7 +82,7 @@
 
     <!-- Terms of Service -->
     <url>
-        <loc>https://numera-finance-lk9a.vercel.app/terms-of-service.html</loc>
+        <loc>https://numera-finance-lk9a.vercel.app/terms-of-service</loc>
         <lastmod>2025-09-29</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.4</priority>
