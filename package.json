@@ -1,12 +1,7 @@
 {
-  "name": "financial-tools-suite",
+  "name": "numera-finance",
   "version": "1.0.0",
-  "description": "A comprehensive suite of financial calculators and tools",
-  "main": "docs/index.html",
+  "private": true,
   "scripts": {},
-  "keywords": ["financial", "calculator", "tools"],
-  "author": "Financial Tools Suite",
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {}
 }
